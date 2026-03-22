@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Tutor Profile - SkillSync</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1 class="logo">SkillSync</h1>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="tutors.html">Tutors</a>
+        <a href="signup.html">Become a Tutor</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<div class="profile-container">
+
+<img id="profileImg" class="profile-img">
+
+<h2 id="name"></h2>
+
+<p class="skill skill-tag" id="skill"></p>
+
+<p><strong>Experience:</strong> <span id="exp"></span></p>
+<p><strong>Location:</strong> <span id="location"></span></p>
+<p><strong>Rating:</strong> <span id="rating"></span></p>
+
+<button onclick="openContact()">Contact Tutor</button>
+
+<!-- Popup -->
+<div id="contactPopup" class="popup">
+
+<div class="popup-content">
+
+<h3>Contact Tutor</h3>
+
+<input type="text" placeholder="Your Name">
+<textarea placeholder="Your Message"></textarea>
+
+<button onclick="sendMessage()">Send</button>
+<button onclick="closeContact()">Close</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("name").innerText = localStorage.getItem("name");
+document.getElementById("skill").innerText = localStorage.getItem("skill");
+document.getElementById("exp").innerText = localStorage.getItem("exp");
+document.getElementById("location").innerText = localStorage.getItem("location");
+document.getElementById("rating").innerText = localStorage.getItem("rating");
+
+document.getElementById("profileImg").src = "../images/" + localStorage.getItem("image");
+
+</script>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Tutors - SkillSync</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1 class="logo">SkillSync</h1>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="tutors.html">Tutors</a>
+        <a href="signup.html">Become a Tutor</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<h1 style="text-align:center; margin-top:20px;">Available Tutors</h1>
+<input type="text" id="searchBar" placeholder="Search by skill..." onkeyup="searchTutor()">
+<p id="noResult" style="text-align:center; display:none;">
+No tutors found
+</p>
+
+<div class="tutor-container">
+
+<div class="match-section">
+
+<h2>Find Tutor for You</h2>
+
+<input type="text" id="userSkill" placeholder="What do you want to learn?">
+
+<button onclick="matchTutor()">Find Tutor</button>
+
+</div>
+
+<!-- Tutor 1 -->
+<div class="tutor-card">
+    <img src="../images/tutor1.jpg" class="tutor-img">
+    <h3>Ananya</h3>
+    <p class="skill skill-tag">Classical Dance</p>
+    <p>⭐⭐⭐⭐</p>
+    <button onclick="openProfile('Ananya','Classical Dance','5 years','Kochi','⭐⭐⭐⭐','tutor1.jpg')">
+View Profile
+</button>
+</div>
+
+<!-- Tutor 2 -->
+<div class="tutor-card">
+    <img src="../images/tutor2.jpg" class="tutor-img">
+    <h3>Rahul</h3>
+   <p class="skill skill-tag">Guitar</p>
+    <p>⭐⭐⭐⭐⭐</p>
+    <button onclick="openProfile('Rahul','Guitar','3 years','Trivandrum','⭐⭐⭐⭐⭐','tutor2.jpg')">
+View Profile
+</button>
+
+</div>
+
+<!-- Tutor 3 -->
+<div class="tutor-card">
+    <img src="../images/tutor3.jpg" class="tutor-img">
+    <h3>Meera</h3>
+    <p class="skill skill-tag">Painting</p>
+    <p>⭐⭐⭐⭐</p>
+    <button onclick="openProfile('Meera','Painting','4 years','Alappuzha','⭐⭐⭐⭐','tutor3.jpg')">
+View Profile
+</button>
+</div>
+
+</div>
+
+<script src="../js/script.js"></script>
+
+</body>
+</html>
