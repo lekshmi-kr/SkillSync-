@@ -57,18 +57,18 @@ Explore Tutors
 
 <div class="steps">
 
-<div>
-<h3>1. Search</h3>
+<div class="step-card">
+<h3>🔍 Search</h3>
 <p>Find tutors based on your interests</p>
 </div>
 
-<div>
-<h3>2. Explore</h3>
+<div class="step-card">
+<h3>👤 Explore</h3>
 <p>View tutor profiles and skills</p>
 </div>
 
-<div>
-<h3>3. Connect</h3>
+<div class="step-card">
+<h3>💬 Connect</h3>
 <p>Contact tutors easily</p>
 </div>
 
@@ -84,7 +84,7 @@ Explore Tutors
 
 <div class="tutor-card">
 <img src="images/tutor1.jpg" class="tutor-img">
-<h3>Ananya</h3>
+<h3>Aniket</h3>
 <p>Dance</p>
 </div>
 
@@ -97,6 +97,23 @@ Explore Tutors
 </div>
 
 </section>
+
+<form action="http://localhost/skillsync/register.php" method="GET">
+    <input type="text" name="name" placeholder="Enter Name" required><br><br>
+    <input type="email" name="email" placeholder="Enter Email" required><br><br>
+    <input type="password" name="password" placeholder="Enter Password" required><br><br>
+    <input type="text" name="role" placeholder="Role (student/tutor)" required><br><br>
+    
+    <button type="submit">Register</button>
+</form>
+
+<form action="http://localhost/skillsync/add_skill.php" method="GET">
+    <input type="number" name="user_id" placeholder="User ID"><br><br>
+    <input type="text" name="skill_name" placeholder="Skill"><br><br>
+    <input type="text" name="description" placeholder="Description"><br><br>
+    
+    <button type="submit">Add Skill</button>
+</form>
 
 </body>
 </html>

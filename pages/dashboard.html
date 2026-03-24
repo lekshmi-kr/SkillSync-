@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - SkillSync</title>
+</head>
+
+<body>
+
+<h2 id="welcome"></h2>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+
+    document.getElementById("welcome").innerText = "Welcome, " + name + " 👋";
+</script>
+
+<br><br>
+
+<a href="tutors.html">Explore Tutors</a>
+
+</body>
+</html>
