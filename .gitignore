@@ -1,10 +1,4 @@
-# Ignore uploaded files
-uploads/
-
-# Ignore database connection config (contains credentials)
-connect.php
-
-# Ignore IDE/OS files
+# IDE/OS files only
 .vscode/
 .idea/
 Thumbs.db
