@@ -1,12 +1,8 @@
 <?php
-// ─────────────────────────────────────────────
-// Update these values with your InfinityFree
-// database credentials from their control panel
-// ─────────────────────────────────────────────
-$host   = "sql300.infinityfree.com"; // from IF panel → MySQL Databases
-$user   = "your_db_username";        // e.g. if0_12345678
-$pass   = "your_db_password";
-$dbname = "your_db_name";            // e.g. if0_12345678_skillsync
+$host   = "sql310.infinityfree.com"; // MySQL Host Name from IF panel
+$user   = "if0_41490108";            // MySQL User Name
+$pass   = "SkillSync";      // your InfinityFree account password
+$dbname = "if0_41490108_skillsync";  // MySQL DB Name
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 
