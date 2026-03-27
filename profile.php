@@ -351,7 +351,7 @@ if (isset($_SESSION['user_id'])) {
                 <button type="submit" class="submit-btn">Request Demo Session</button>
             </form>
 
-            <a href="pages/chat.php?with=<?= $tutor['id'] ?>" class="action-btn chat">
+            <a href="pages/messages.php?with=<?= $tutor['id'] ?>" class="action-btn chat">
                 💬 Chat with <?= htmlspecialchars($tutor['name']) ?>
             </a>
 

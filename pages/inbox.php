@@ -85,7 +85,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <?php if (count($conversations) > 0): ?>
         <?php foreach ($conversations as $c): ?>
-            <a href="chat.php?with=<?= $c['id'] ?>" class="convo-card">
+            <a href="messages.php?with=<?= $c['id'] ?>" class="convo-card">
                 <div class="avatar">👤</div>
                 <div class="convo-info">
                     <h4><?= htmlspecialchars($c['name']) ?></h4>
