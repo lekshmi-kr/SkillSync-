@@ -1,0 +1,11 @@
+# Ignore uploaded files
+uploads/
+
+# Ignore database connection config (contains credentials)
+connect.php
+
+# Ignore IDE/OS files
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
