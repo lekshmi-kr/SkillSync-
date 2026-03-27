@@ -25,6 +25,11 @@ if ($role === 'tutor') {
             ORDER BY bookings.session_date DESC LIMIT 5";
 }
 $bookings = mysqli_query($conn, $sql);
+
+// Unread message count
+$uq = mysqli_query($conn, "SELECT COUNT(*) AS cnt FROM messages
+                             WHERE receiver_id='$user_id' AND is_read=0");
+$unread = intval(mysqli_fetch_assoc($uq)['cnt']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +61,17 @@ $bookings = mysqli_query($conn, $sql);
             transition: background 0.2s;
         }
         .quick-link:hover { background: rgba(255,255,255,0.28); }
+        .quick-link .badge {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 99px;
+            padding: 1px 7px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
         .section-title { font-size: 18px; font-weight: 700; color: #1e3a8a; margin-bottom: 16px; }
         .booking-row {
             background: white;
@@ -88,14 +104,14 @@ $bookings = mysqli_query($conn, $sql);
         <div class="quick-links">
             <?php if ($role === 'tutor'): ?>
                 <a href="tutor_bookings.php" class="quick-link">📋 Booking Requests</a>
-                <a href="inbox.php" class="quick-link">💬 Messages</a>
+                <a href="inbox.php" class="quick-link">💬 Messages<?php if ($unread > 0): ?><span class="badge"><?= $unread ?></span><?php endif; ?></a>
                 <a href="tutor_style.php" class="quick-link">🎓 Teaching Style</a>
                 <a href="attendance.php" class="quick-link">📊 Attendance</a>
                 <a href="credibility.php" class="quick-link">🏅 Credibility Score</a>
             <?php else: ?>
                 <a href="tutors.php" class="quick-link">🔍 Find Tutors</a>
                 <a href="my_bookings.php" class="quick-link">📅 My Bookings</a>
-                <a href="inbox.php" class="quick-link">💬 Messages</a>
+                <a href="inbox.php" class="quick-link">💬 Messages<?php if ($unread > 0): ?><span class="badge"><?= $unread ?></span><?php endif; ?></a>
                 <a href="progress.php" class="quick-link">📈 My Progress</a>
                 <a href="my_style.php" class="quick-link">🎯 Learning Style</a>
                 <a href="attendance.php" class="quick-link">📊 Attendance</a>
